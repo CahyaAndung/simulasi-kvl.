@@ -130,10 +130,14 @@ vC_inst = np.sqrt(2) * VC * np.sin(theta - np.pi / 2)
 vs_inst = vR_inst + vL_inst + vC_inst
 
 # =====================================================
+# =====================================================
 # RINGKASAN HASIL
 # =====================================================
 st.markdown("## 1. Hasil Perhitungan")
 
 a, b, c, d = st.columns(4)
+
 a.metric("Arus RMS", f"{I:.4f} A")
-b.metric("Impedansi |Z|", f
+b.metric("Impedansi |Z|", f"{Z:.3f} Ω")
+c.metric("Sudut fase", f"{phi_deg:.2f}°")
+d.metric("Frekuensi", f"{f} Hz")
